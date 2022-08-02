@@ -4,7 +4,7 @@ import * as express from 'express';
 import { Server } from 'http';
 import Db from './db';
 export async function createApolloServer(
-  _db: Db,
+  db: Db,
   httpServer: Server,
   app: express.Application
 ): Promise<ApolloServer<ExpressContext>> {
@@ -29,8 +29,29 @@ export async function createApolloServer(
       reason: String!
     }
   `;
+
+  const resolvers = {
+    Query: {
+      currentUser: () => {
+        return {
+          id: '123',
+          name: 'John Doe',
+          handle: 'johndoe',
+          coverUrl: '',
+          avatarUrl: '',
+          createdAt: '',
+          updatedAt: '',
+        };
+      },
+      suggestions: () => {
+        return [];
+      },
+    },
+  };
   const server = new ApolloServer({
     typeDefs,
+    resolvers,
+    context: () => ({ db }),
     plugins: [ApolloServerPluginDrainHttpServer({ httpServer })],
   });
   await server.start();
