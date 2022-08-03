@@ -41,6 +41,20 @@
       "createdAt": "2022-08-03T00:53:50.576Z",
       "updatedAt": "2022-08-03T00:53:50.576Z",
       "id": "tweet-41d0c03c-1d8e-4032-beaf-93996847433d"
+    },
+    {
+      "message": "Hello world!",
+      "userId": "user-15a37948-7712-4e0b-a554-2fef33f31697",
+      "createdAt": "2022-08-03T02:44:49.187Z",
+      "updatedAt": "2022-08-03T02:44:49.187Z",
+      "id": "tweet-41945861-85f2-44fb-a97f-4894d66f0567"
+    },
+    {
+      "message": "Will we see this tweet?",
+      "userId": "user-15a37948-7712-4e0b-a554-2fef33f31697",
+      "createdAt": "2022-08-03T02:45:04.492Z",
+      "updatedAt": "2022-08-03T02:45:04.492Z",
+      "id": "tweet-e6cadfbf-9246-4518-be9f-347953d494e7"
     }
   ],
   "users": [
@@ -165,28 +179,19 @@
   ],
   "topicTrends": [
     {
-      "topic": "Pointless Suggestions",
-      "tweetCount": 999,
-      "kind": "topic",
-      "id": "topictrend-73f3c816-b1fc-456d-8c45-beb9c657a663"
-    },
-    {
       "topic": "Frontend Masters",
       "tweetCount": 12345,
       "kind": "topic",
       "id": "topictrend-4f992d65-e229-48f2-b523-2faba1343f3e"
-    }
-  ],
-  "topicTrendQuotes": [
+    },
     {
       "topic": "Pointless Suggestions",
       "tweetCount": 999,
-      "title": "clippy",
-      "description": "It looks like you're trying to write a letter...",
-      "imageUrl": "http://localhost:3000/static/clippy-logo.jpeg",
-      "topicTrendId": "topictrend-73f3c816-b1fc-456d-8c45-beb9c657a663",
-      "id": "topictrendquote-d0e1ba0a-fa05-400a-9b94-7403b82ab0f4"
-    },
+      "kind": "topic",
+      "id": "topictrend-73f3c816-b1fc-456d-8c45-beb9c657a663"
+    }
+  ],
+  "topicTrendQuotes": [
     {
       "topic": "Frontend Masters",
       "tweetCount": 12345,
@@ -195,6 +200,15 @@
       "imageUrl": "http://localhost:3000/static/fem_logo.png",
       "topicTrendId": "topictrend-4f992d65-e229-48f2-b523-2faba1343f3e",
       "id": "topictrendquote-43d669bc-885b-4012-a4e6-653e38a6c521"
+    },
+    {
+      "topic": "Pointless Suggestions",
+      "tweetCount": 999,
+      "title": "clippy",
+      "description": "It looks like you're trying to write a letter...",
+      "imageUrl": "http://localhost:3000/static/clippy-logo.jpeg",
+      "topicTrendId": "topictrend-73f3c816-b1fc-456d-8c45-beb9c657a663",
+      "id": "topictrendquote-d0e1ba0a-fa05-400a-9b94-7403b82ab0f4"
     }
   ],
   "suggestions": [
