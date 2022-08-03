@@ -1,6 +1,8 @@
 import { Favorite, Tweet } from './resolvers-types.generated';
 import { DbTweet } from './db';
 import { DbFavorite } from './db';
+import { DbTrend } from './db';
+import { Trend } from './resolvers-types.generated';
 
 // Note:
 // author is related record that is a field of typed User and that is going to
@@ -22,4 +24,15 @@ export const favoriteTransform = (
     createdAt: t.createdAt,
     updatedAt: t.updatedAt,
   };
+};
+
+export const trendTransform = (t: DbTrend): Trend => {
+  const { tweetCount } = t;
+  if (t.kind === 'topic') {
+    const { topic, quote } = t;
+    return { tweetCount, topic, quote };
+  } else {
+    const { hashtag } = t;
+    return { tweetCount, hashtag };
+  }
 };
